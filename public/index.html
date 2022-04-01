@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+   <!--This is a nice, simple and funny JS Beginner Project for my friends from Radio Dorfdepp. 🧠 ✨ 📻 🎶 Enjoy listening to the random sound files... music by kallekrass.de 🎤 and programming by stefanpertschi.de 🤖 💘 Lot's of Robo-Love © Stefan Pertschi -->
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Radio Dorfdepp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" async defer></script>
+  </head>
+
+<body>
+  <div class="container-fluid">
+  <!--Age Verifyer-->
+    <div id="age-verify">
+        <div>
+          <img class="age-verify-image" src="bilder/RadioDorfdeppFanNipplePink.jpg">
+            <div class="window">
+              <span class="title">Nix für Kids! Bist Du schon 18 ?</span>
+              <span>Um unsere Mucke zu hören musst Du mindestens 18 sein! Küsschen 💋 </span> 
+                <button class="yes" onclick="overAge()">Yo, ich bin 18</button>
+                <button class="no" onclick="underAge()">Nö, aber egal</button>
+              <div class="underBox">
+                    <span class="title">Sorry!</span>
+                    <span>Um unsere Mucke zu hören musst Du mindestens 18 Jahre alt sein, versuch es in ein paar Jahren noch    einmal, Bussis! 💋</span>
+                   <button class="back" onclick="goBack()">Zurück</button>
+                  </div>
+              <span>
+            </div>  
+        </div>
+    </div> 
+  </div>
+
+<!-- The Radio from the Dorfdepps -->
+  <div class="container-fluid">
+    <div class="box"> 
+        <!-- to keep it simple: I just made up an image button with the following attributes: -->
+        <input type="image" class="img-responsive" id="bgimage_on" src="bilder/Radio_01.jpg"  onclick=" playClick(); toDo(); this.disabled=true"  alt="img button"></input> 
+        <audio id="audioplayer"><!-- Remove the "Controls" Attribute if you don't want the visual controls --></audio>
+      </div>  
+    </div>
+  
+  </body>
+
+</html>

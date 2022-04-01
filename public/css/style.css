@@ -1,0 +1,326 @@
+/* Age Verification CSS*/
+img {
+  width: 115%;
+  height: auto;
+  position: relative;
+  opacity: 1;
+  border-bottom: solid 6px #ff99ff;
+  box-shadow: 
+  0 0 .2rem #f0f,
+  0 0 .2rem #f0f,
+  0 0 2rem #f0f,
+  0 0 0.8rem #f0f,
+  0 0 2.8rem #f0f,
+  inset 0 0 1.3rem #f0f;
+  transition: 500ms;
+
+}
+
+#age-verify {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 0, 255, 0.5);
+  transition: 500ms;
+}
+/* Pulsate Animation*/
+@keyframes pulsate {
+    
+  100% {
+      text-shadow:
+      0 0 4px #f0f,
+      0 0 11px #f0f
+      0 0 19px #f0f,
+      0 0 40px #f0f,
+      0 0 80px #f0f,
+      0 0 90px #f0f,
+      0 0 100px #f0f,
+      0 0 150px #f0f;
+  }
+  
+  0% {
+    text-shadow:
+    0 0 4px #f0f,
+    0 0 10px #f0f,
+    0 0 18px #f0f,
+    0 0 38px #f0f,
+    0 0 73px #f0f,
+    0 0 80px #f0f,
+    0 0 94px #f0f,
+    0 0 140px #f0f;
+  } 
+}
+
+
+/* Flickering Animation*/
+@keyframes flicker{
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+    /* pink glow */
+    0 0 7px #f0f,
+    0 0 10px #f0f,
+    0 0 21px #f0f,
+    /* pink glow */
+    0 0 42px #f0f,
+    0 0 82px #f0f,
+    0 0 92px #f0f,
+    0 0 102px #f0f,
+    0 0 151px #f0f;
+  } 
+  20%, 24%, 55% {       
+    text-shadow: none;
+  }
+}
+
+
+#age-verify .window {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 300px ;
+  overflow: hidden;
+  padding: 40px;
+  margin-left: -200px;
+  margin-top: -125px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 6px solid #f9f;;
+  box-sizing: border-box;
+  box-shadow: 
+  0 0 .2rem #f0f,
+  0 0 .2rem #f0f,
+  0 0 2rem #f0f,
+  0 0 0.8rem #f0f,
+  0 0 2.8rem #f0f,
+  inset 0 0 1.3rem #f0f;
+  transition: 500ms;
+}
+#age-verify .window span {
+  animation: pulsate 0.11s infinite alternate;   
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #f9f;
+  text-shadow:
+  /* pink glow */
+  0 0 7px #f0f,
+  0 0 10px #f0f,
+  0 0 21px #f0f,
+  /* pink glow */
+  0 0 42px #f0f,
+  0 0 82px #f0f,
+  0 0 92px #f0f,
+  0 0 102px #f0f,
+  0 0 151px #f0f;
+}
+
+#age-verify .window span.title {
+  
+  color: #f9f;
+  font-size: 24px;
+  }
+#age-verify .window button {
+  animation: flicker 0.11s infinite alternate;  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 48%;
+  height: 60px;
+  color: #f9f;
+  text-shadow:
+  /* pink glow */
+  0 0 7px #f0f,
+  0 0 10px #f0f,
+  0 0 21px #f0f,
+  /* pink glow */
+  0 0 42px #f0f,
+  0 0 82px #f0f,
+  0 0 92px #f0f,
+  0 0 102px #f0f,
+  0 0 151px #f0f;
+  font-size: 18px;
+  border:solid  4px #f9f;
+  background-color: #03030300;
+  margin-top: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+  transform: scale(1);
+  transition: 0.2s;
+  box-shadow: 
+  0 0 .1rem #f0f,
+  0 0 .1rem #f0f,
+  0 0 1rem #f0f,
+  0 0 0.5rem #f0f,
+  0 0 1.8rem #f0f,
+  inset 0 0 1.3rem #f0f;
+  transition: 500ms;
+}
+#age-verify .window button.back {
+  display: block;
+  float: none;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ff00ff !important;
+  margin-top: 20px;
+}
+#age-verify .window button.yes {
+   
+  float: left;
+}
+#age-verify .window button.no {
+  
+  float: right;
+}
+#age-verify .window button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  background-color: #790079a8;
+}
+#age-verify .window .underBox {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  padding: 40px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  opacity: 0.9;
+  background-color:  rgb(0, 0, 0);
+  transition: 500ms;
+  box-sizing: border-box;
+  box-shadow: 
+  0 0 .1rem #f0f,
+  0 0 .1rem #f0f,
+  0 0 1rem #f0f,
+  0 0 0.5rem #f0f,
+  0 0 1.8rem #f0f,
+  inset 0 0 1.3rem #f0f;
+  transition: 500ms;
+}
+#age-verify .window .underBox * {
+  color: #f9f !important;
+}
+#age-verify.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+#age-verify.hidden .window {
+  transform: scale(0.5);
+}
+#age-verify.under .window .underBox {
+  top: 0%;
+}
+
+
+/* General Background */
+
+body { 
+  background-color: black; 
+}
+
+/* Phones Portrait*/
+@media screen and (max-width: 442px) {
+  
+ #box{
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  #bgimage_on{
+    position: static;
+    max-width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+
+}
+
+/* more Phones next sizes*/
+@media screen and (min-width: 443px) and (max-width: 768px) {
+
+  #box{
+    width: 100%;
+    height: auto;
+  
+  }
+  
+    #bgimage_on{
+      position: static;
+      max-width: 100%;
+      height: auto;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  
+  }
+
+/* Pads */
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+
+  #box{
+    width: 100%;
+    height: auto;
+  }
+
+
+  #bgimage_on {
+    position: static;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+  }
+
+}
+
+
+/* macbook 13zoll */
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+
+    #box{
+      width: 100%;
+      height: auto;
+    }
+
+    .bgimage_on {
+      position: static;
+      width: 100%;
+      height: auto;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  
+  }
+
+/* macbook 15zoll  and desktops ...*/
+@media screen and (min-width: 1281px){
+
+  #box{
+    width: 100%;
+    height: auto;
+  }
+
+  .bgimage_on {
+    position: static;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+}
+
+
+
+
+
+
+
+

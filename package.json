@@ -1,0 +1,28 @@
+{
+  "name": "radiodorfdepp",
+  "version": "1.0.0",
+  "description": "This is a nice, simple and funny JS Beginner Project for my friends from [Radio Dorfdepp](https://soundcloud.com/radiodorfdepp). 🧠 ✨ 📻 🎶",
+  "main": "ening to the random sound files...we will publish that stuff shortly on [kallekrass.de](https://kallekrass.de) 🎤 and [stefanpertschi.de](https://stefanpertschi.de) 🤖 💘 Lot's of Robo-Love SP ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StPercy/RadioDorfdepp.git"
+  },
+  "keywords": [
+    "mp3",
+    "random",
+    "player"
+  ],
+  "author": "stefan pertschi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StPercy/RadioDorfdepp/issues"
+  },
+  "homepage": "https://github.com/StPercy/RadioDorfdepp#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "ngrok": "^4.2.2"
+  }
+}
